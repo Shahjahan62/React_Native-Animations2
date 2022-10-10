@@ -17,7 +17,9 @@ const ParallelAnimate = () => {
         duration: 1000,
         useNativeDriver: false,
       }),
-    ]).start();
+    ]).start(() => {
+      alert("Animation completed");
+    });
   };
 
   const bgInterpolate = colorAnimation.interpolate({
