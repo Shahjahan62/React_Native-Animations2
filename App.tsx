@@ -5,13 +5,15 @@ import SwipeImages from "./src/SwipeImages";
 import SpringAnimate from "./src/SpringAnimate";
 import EventAnimate from "./src/EventAnimate";
 import DecayAnimate from "./src/DecayAnimate";
+import AddAnimate from "./src/AddAnimted";
 export default function App() {
   return (
     // <PanPonder />
     // <SwipeImages />
     // <SpringAnimate />
     // <EventAnimate />
-    <DecayAnimate />
+    // <DecayAnimate />
+    <AddAnimate />
   );
 }
 
