@@ -9,6 +9,7 @@ import AddAnimate from "./src/AddAnimted";
 import DivideAnimate from "./src/DivideAnimate";
 import MultiplyAnimate from "./src/MultiplyAnimate";
 import ModuloAnimate from "./src/ModuloAnimate";
+import ParallelAnimate from "./src/Combining Animations/ParallelAnimate";
 export default function App() {
   return (
     // <PanPonder />
@@ -19,7 +20,8 @@ export default function App() {
     // <AddAnimate />
     // <DivideAnimate />
     // <MultiplyAnimate />
-    <ModuloAnimate />
+    // <ModuloAnimate />
+    <ParallelAnimate />
   );
 }
 
