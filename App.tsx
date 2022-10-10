@@ -11,6 +11,7 @@ import MultiplyAnimate from "./src/MultiplyAnimate";
 import ModuloAnimate from "./src/ModuloAnimate";
 import ParallelAnimate from "./src/Combining Animations/ParallelAnimate";
 import SecuenceAnimate from "./src/Combining Animations/SecuenceAnimate";
+import StaggerAnimate from "./src/Combining Animations/StaggerAnimate";
 export default function App() {
   return (
     // <PanPonder />
@@ -23,7 +24,8 @@ export default function App() {
     // <MultiplyAnimate />
     // <ModuloAnimate />
     // <ParallelAnimate />
-    <SecuenceAnimate />
+    // <SecuenceAnimate />
+    <StaggerAnimate />
   );
 }
 
