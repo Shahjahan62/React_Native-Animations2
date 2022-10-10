@@ -3,11 +3,15 @@ import { StyleSheet, Text, View } from "react-native";
 import PanPonder from "./src/PanPonder";
 import SwipeImages from "./src/SwipeImages";
 import SpringAnimate from "./src/SpringAnimate";
+import EventAnimate from "./src/EventAnimate";
+import DecayAnimate from "./src/DecayAnimate";
 export default function App() {
   return (
     // <PanPonder />
     // <SwipeImages />
-    <SpringAnimate />
+    // <SpringAnimate />
+    // <EventAnimate />
+    <DecayAnimate />
   );
 }
 
