@@ -5,24 +5,24 @@ const ModuloAnimate = () => {
   const animated = new Animated.Value(0);
 
   const startAnimation = () => {
-    Animated.timing(animated, {
-      toValue: 300,
-      duration: 1500,
-      useNativeDriver: false,
-    }).start(() => {
+    Animated.parallel([
       Animated.timing(animated, {
-        toValue: 0,
-        duration: 200,
+        toValue: 12,
+        duration: 3500,
         useNativeDriver: false,
-      }).start();
-    });
+      }),
+    ]).start();
   };
-  const Rvalue = new Animated.Value(2);
+  const Rvalue = 2;
 
-  const newAnimated = Animated.multiply(animated, Rvalue);
+  const newAnimated = Animated.modulo(animated, Rvalue);
 
+  const interpolated = newAnimated.interpolate({
+    inputRange: [0, 3],
+    outputRange: ["0deg", "270deg"],
+  });
   const animatedStyle = {
-    transform: [{ translateY: newAnimated }],
+    transform: [{ rotate: interpolated }],
   };
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
