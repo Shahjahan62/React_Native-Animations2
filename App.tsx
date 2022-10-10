@@ -7,6 +7,8 @@ import EventAnimate from "./src/EventAnimate";
 import DecayAnimate from "./src/DecayAnimate";
 import AddAnimate from "./src/AddAnimted";
 import DivideAnimate from "./src/DivideAnimate";
+import MultiplyAnimate from "./src/MultiplyAnimate";
+import ModuloAnimate from "./src/ModuloAnimate";
 export default function App() {
   return (
     // <PanPonder />
@@ -15,7 +17,9 @@ export default function App() {
     // <EventAnimate />
     // <DecayAnimate />
     // <AddAnimate />
-    <DivideAnimate />
+    // <DivideAnimate />
+    // <MultiplyAnimate />
+    <ModuloAnimate />
   );
 }
 
