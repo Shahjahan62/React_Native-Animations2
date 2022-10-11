@@ -18,6 +18,19 @@ const DelayAnimate = () => {
         useNativeDriver: false,
       }),
       Animated.delay(1500),
+
+      Animated.parallel([
+        Animated.timing(colorAnimation, {
+          toValue: 0,
+          duration: 500,
+          useNativeDriver: false,
+        }),
+        Animated.timing(scaleAnimation, {
+          toValue: 1,
+          duration: 300,
+          useNativeDriver: false,
+        }),
+      ]),
     ]).start();
   };
   const bgInterpolate = colorAnimation.interpolate({
