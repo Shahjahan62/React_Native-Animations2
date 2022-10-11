@@ -16,6 +16,7 @@ import DelayAnimate from "./src/Combining Animations/DelayAnimate";
 import NumAndInterpolates from "./src/Interpolations/NumAndInterpolates";
 import BgColorInterpolations from "./src/Interpolations/BgColorInterpolations";
 import RotationAnimate from "./src/Interpolations/RotationAnimate";
+import WidthHeight from "./src/Interpolations/WidthHeight";
 export default function App() {
   return (
     // <PanPonder />
@@ -33,7 +34,8 @@ export default function App() {
     // <DelayAnimate />
     // <NumAndInterpolates />
     // <BgColorInterpolations />
-    <RotationAnimate />
+    // <RotationAnimate />
+    <WidthHeight />
   );
 }
 
