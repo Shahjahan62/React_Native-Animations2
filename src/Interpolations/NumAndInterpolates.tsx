@@ -28,10 +28,18 @@ const NumAndInterpolates = () => {
     outputRange: [1, 0.5],
   });
 
+  const translateXinterpolate = animatedInterpolate.interpolate({
+    inputRange: [0, 30, 65, 100, 120, 160, 200, 220, 300],
+    outputRange: [-30, -60, -20, -50, 0, -100, 0, 200, -100],
+  });
+
   const animateStyle = {
     transform: [
       {
         translateY: animatedInterpolate,
+      },
+      {
+        translateX: translateXinterpolate,
       },
     ],
     opacity: interpolatedIntepolate,
