@@ -19,7 +19,7 @@ const NumAndInterpolates = () => {
   };
 
   const animatedInterpolate = animate.interpolate({
-    inputRange: [0, 1, 3],
+    inputRange: [0, 1, 2],
     outputRange: [0, 300, 0],
   });
 
