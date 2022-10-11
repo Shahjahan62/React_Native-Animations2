@@ -15,6 +15,7 @@ import StaggerAnimate from "./src/Combining Animations/StaggerAnimate";
 import DelayAnimate from "./src/Combining Animations/DelayAnimate";
 import NumAndInterpolates from "./src/Interpolations/NumAndInterpolates";
 import BgColorInterpolations from "./src/Interpolations/BgColorInterpolations";
+import RotationAnimate from "./src/Interpolations/RotationAnimate";
 export default function App() {
   return (
     // <PanPonder />
@@ -31,7 +32,8 @@ export default function App() {
     // <StaggerAnimate />
     // <DelayAnimate />
     // <NumAndInterpolates />
-    <BgColorInterpolations />
+    // <BgColorInterpolations />
+    <RotationAnimate />
   );
 }
 
