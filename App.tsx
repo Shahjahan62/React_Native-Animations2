@@ -13,6 +13,7 @@ import ParallelAnimate from "./src/Combining Animations/ParallelAnimate";
 import SecuenceAnimate from "./src/Combining Animations/SecuenceAnimate";
 import StaggerAnimate from "./src/Combining Animations/StaggerAnimate";
 import DelayAnimate from "./src/Combining Animations/DelayAnimate";
+import NumAndInterpolates from "./src/Interpolations/NumAndInterpolates";
 export default function App() {
   return (
     // <PanPonder />
@@ -27,7 +28,8 @@ export default function App() {
     // <ParallelAnimate />
     // <SecuenceAnimate />
     // <StaggerAnimate />
-    <DelayAnimate />
+    // <DelayAnimate />
+    <NumAndInterpolates />
   );
 }
 
