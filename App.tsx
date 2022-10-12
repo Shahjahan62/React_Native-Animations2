@@ -17,6 +17,7 @@ import NumAndInterpolates from "./src/Interpolations/NumAndInterpolates";
 import BgColorInterpolations from "./src/Interpolations/BgColorInterpolations";
 import RotationAnimate from "./src/Interpolations/RotationAnimate";
 import WidthHeight from "./src/Interpolations/WidthHeight";
+import ExtraPolateAnimate from "./src/Interpolations/ExtraPolateAnimate";
 export default function App() {
   return (
     // <PanPonder />
@@ -35,7 +36,8 @@ export default function App() {
     // <NumAndInterpolates />
     // <BgColorInterpolations />
     // <RotationAnimate />
-    <WidthHeight />
+    // <WidthHeight />
+    <ExtraPolateAnimate />
   );
 }
 
