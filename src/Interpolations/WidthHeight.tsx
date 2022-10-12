@@ -10,7 +10,13 @@ import React from "react";
 const WidthHeight = () => {
   const animation = new Animated.Value(0);
 
-  const startAnimation = () => {};
+  const startAnimation = () => {
+    Animated.timing(animation, {
+      toValue: 2,
+      duration: 1500,
+      useNativeDriver: false,
+    }).start();
+  };
 
   const widthStyle = animation.interpolate({
     inputRange: [0, 1],
@@ -34,12 +40,13 @@ const WidthHeight = () => {
             {
               width: "20%",
               height: "20%",
-              backgroundColor: "teal",
+              backgroundColor: "black",
             },
             animatedStyle,
           ]}
         />
       </TouchableOpacity>
+      <Text>hello</Text>
     </View>
   );
 };
