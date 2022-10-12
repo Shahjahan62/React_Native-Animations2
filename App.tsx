@@ -18,6 +18,7 @@ import BgColorInterpolations from "./src/Interpolations/BgColorInterpolations";
 import RotationAnimate from "./src/Interpolations/RotationAnimate";
 import WidthHeight from "./src/Interpolations/WidthHeight";
 import ExtraPolateAnimate from "./src/Interpolations/ExtraPolateAnimate";
+import KittenCards from "./src/KItten Cards/KittenCards";
 export default function App() {
   return (
     // <PanPonder />
@@ -37,7 +38,8 @@ export default function App() {
     // <BgColorInterpolations />
     // <RotationAnimate />
     // <WidthHeight />
-    <ExtraPolateAnimate />
+    // <ExtraPolateAnimate />
+    <KittenCards />
   );
 }
 
