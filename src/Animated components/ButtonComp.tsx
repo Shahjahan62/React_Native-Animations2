@@ -67,14 +67,14 @@ const ButtonComp = () => {
     transform: [{ rotateX: interX }, { rotateY: interY }],
   };
 
-  useEffect(() => {
-    startAnimation();
-    startAnimation2();
-  }, []);
+  // useEffect(() => {
+  //   startAnimation();
+  //   startAnimation2();
+  // }, []);
 
   return (
-    <View style={{ flex: 1 }}>
-      <AnimatedButton
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      {/* <AnimatedButton
         onPress={startAnimation}
         style={{
           flex: 1,
@@ -87,7 +87,19 @@ const ButtonComp = () => {
           <Text style={{ fontSize: 80, fontWeight: "bold" }}>Jami</Text>
           <MaterialCommunityIcons name="sword" size={50} color="black" />
         </Animated.View>
-      </AnimatedButton>
+      </AnimatedButton> */}
+      <View
+        style={{
+          width: 200,
+          height: 200,
+          borderWidth: 2,
+          borderRadius: 100,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <AnimatedButton style={{ borderWidth: 1, width: 170 }} />
+      </View>
     </View>
   );
 };
