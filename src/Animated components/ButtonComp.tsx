@@ -8,12 +8,13 @@ import {
 } from "react-native";
 import React, { useEffect } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-
+import { FontAwesome5 } from "@expo/vector-icons";
 const AnimatedButton: any = Animated.createAnimatedComponent(View);
 const ButtonComp = () => {
   const animation = new Animated.Value(0);
 
   const scaleAnimation = new Animated.Value(1);
+  const sprng = new Animated.Value(0);
 
   const startAnimation = () => {
     Animated.timing(animation, {
@@ -33,11 +34,29 @@ const ButtonComp = () => {
     Animated.loop(
       Animated.timing(scaleAnimation, {
         toValue: 2,
-        duration: 2000,
+        duration: 1000,
         useNativeDriver: false,
       })
       // scaleAnimation.setValue(0)
     ).start();
+  };
+
+  const handleLoop = () => {
+    Animated.loop(
+      Animated.timing(sprng, {
+        toValue: 1,
+        duration: 10000,
+        useNativeDriver: false,
+      })
+    ).start();
+  };
+  const interpolated = sprng.interpolate({
+    inputRange: [0, 1],
+    outputRange: ["0deg", "360deg"],
+  });
+
+  const animatedStyle3 = {
+    transform: [{ rotate: interpolated }],
   };
 
   const btnColor = animation.interpolate({
@@ -56,21 +75,22 @@ const ButtonComp = () => {
 
   const interX = scaleAnimation.interpolate({
     inputRange: [0, 1],
-    outputRange: ["0deg", "360deg"],
+    outputRange: ["0deg", "20deg"],
   });
   const interY = scaleAnimation.interpolate({
-    inputRange: [0, 1, 1.1],
-    outputRange: ["0deg", "360deg", "180deg"],
+    inputRange: [0, 1],
+    outputRange: ["0deg", "60deg"],
   });
 
   const rotateName = {
     transform: [{ rotateX: interX }, { rotateY: interY }],
   };
 
-  // useEffect(() => {
-  //   startAnimation();
-  //   startAnimation2();
-  // }, []);
+  useEffect(() => {
+    startAnimation();
+    // startAnimation2();
+    handleLoop();
+  }, []);
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -98,8 +118,15 @@ const ButtonComp = () => {
           justifyContent: "center",
         }}
       >
-        <AnimatedButton style={{ borderWidth: 1, width: 170 }} />
+        <AnimatedButton>
+          <Animated.View style={[animatedStyle3]}>
+            <FontAwesome5 name="long-arrow-alt-down" size={120} color="black" />
+          </Animated.View>
+        </AnimatedButton>
       </View>
+      <TouchableOpacity onPress={handleLoop}>
+        <Animated.View style={[animatedStyle3]}></Animated.View>
+      </TouchableOpacity>
     </View>
   );
 };
