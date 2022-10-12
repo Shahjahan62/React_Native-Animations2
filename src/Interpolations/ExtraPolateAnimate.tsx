@@ -19,8 +19,13 @@ const ExtraPolateAnimate = () => {
   };
 
   const scaleInterpolation = animation.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, 1],
+    inputRange: [1, 2],
+    outputRange: [1, 2],
+    // extrapolate: "clamp",
+    // extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+
+    // * The extrapolate key of an interpolate call defines how the interpolation should operate. Additionally you can define extrapolateLeft and extrapolateRight if you need either side of the interpolation to operate differently.
   });
 
   const animationStyle = {
