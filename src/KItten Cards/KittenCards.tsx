@@ -34,7 +34,25 @@ const KittenCards = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.top}></View>
+      <View style={styles.top}>
+        {data.items
+          .slice(0, 2)
+          .reverse()
+          .map(({ image, id, text }, index, items) => {
+            return (
+              <Animated.View style={[styles.card]} key={id}>
+                <Animated.Image
+                  source={image}
+                  style={[styles.image]}
+                  resizeMode="cover"
+                />
+                <View style={styles.lowerText}>
+                  <Text>{text}</Text>
+                </View>
+              </Animated.View>
+            );
+          })}
+      </View>
     </View>
   );
 };
@@ -49,5 +67,26 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  card: {
+    width: 300,
+    height: 300,
+    position: "absolute",
+    borderRadius: 3,
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowOffset: { width: 0, height: 0 },
+    shadowRadius: 5,
+    borderWidth: 1,
+    borderColor: "#FFF",
+  },
+  image: {
+    borderRadius: 2,
+    flex: 3,
+  },
+  lowerText: {
+    flex: 1,
+    backgroundColor: "#FFF",
+    padding: 5,
   },
 });
