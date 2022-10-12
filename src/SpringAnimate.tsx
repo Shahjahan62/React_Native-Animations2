@@ -26,7 +26,7 @@ const SpringAnimate = () => {
   const handleLoop = () => {
     Animated.loop(
       Animated.timing(sprng, {
-        toValue: 100,
+        toValue: 1,
         duration: 10000,
         useNativeDriver: false,
       })
