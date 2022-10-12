@@ -19,6 +19,7 @@ import RotationAnimate from "./src/Interpolations/RotationAnimate";
 import WidthHeight from "./src/Interpolations/WidthHeight";
 import ExtraPolateAnimate from "./src/Interpolations/ExtraPolateAnimate";
 import KittenCards from "./src/KItten Cards/KittenCards";
+import ButtonComp from "./src/Animated components/ButtonComp";
 export default function App() {
   return (
     // <PanPonder />
@@ -39,7 +40,8 @@ export default function App() {
     // <RotationAnimate />
     // <WidthHeight />
     // <ExtraPolateAnimate />
-    <KittenCards />
+    // <KittenCards />
+    <ButtonComp />
   );
 }
 
