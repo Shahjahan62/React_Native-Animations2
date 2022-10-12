@@ -8,7 +8,7 @@ import {
 import React from "react";
 
 const WidthHeight = () => {
-  const animation = new Animated.Value(0);
+  const animation = new Animated.Value(1);
 
   const startAnimation = () => {
     Animated.timing(animation, {
