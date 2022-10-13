@@ -5,10 +5,16 @@ import {
   Animated,
   Button,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import React, { useEffect } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
+import { Fontisto } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
+
 const AnimatedButton: any = Animated.createAnimatedComponent(View);
 const ButtonComp = () => {
   const animation = new Animated.Value(0);
@@ -44,8 +50,8 @@ const ButtonComp = () => {
   const handleLoop = () => {
     Animated.loop(
       Animated.timing(sprng, {
-        toValue: 1,
-        duration: 10000,
+        toValue: 2,
+        duration: 20000,
         useNativeDriver: false,
       })
     ).start();
@@ -118,9 +124,45 @@ const ButtonComp = () => {
           justifyContent: "center",
         }}
       >
-        <AnimatedButton>
-          <Animated.View style={[animatedStyle3]}>
-            <FontAwesome5 name="long-arrow-alt-down" size={120} color="black" />
+        <AnimatedButton
+          style={{ alignItems: "center", justifyContent: "center" }}
+        >
+          <Image
+            style={{
+              width: 200,
+              height: 200,
+              position: "absolute",
+            }}
+            source={require("../../assets/clock.png")}
+          />
+          {/* <MaterialIcons name="arrow-right-alt" size={24} color="black" /> */}
+
+          <Animated.View
+            style={[
+              animatedStyle3,
+              { alignItems: "center", justifyContent: "center" },
+            ]}
+          >
+            {/* <FontAwesome
+              name="long-arrow-up"
+              bottom={50}
+              size={120}
+              color="black"
+            /> */}
+            <Image
+              style={{
+                width: 130,
+                height: 50,
+                position: "absolute",
+              }}
+              source={require("../../assets/arrow1.png")}
+            />
+            {/* <Fontisto name="arrow-up-l" size={120} color="black" /> */}
+            {/* <MaterialCommunityIcons
+              name="axis-arrow"
+              size={120}
+              color="black"
+            /> */}
           </Animated.View>
         </AnimatedButton>
       </View>
