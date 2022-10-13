@@ -13,6 +13,9 @@ import ExtraPolateAnimate from "../Interpolations/ExtraPolateAnimate";
 import NumAndInterpolates from "../Interpolations/NumAndInterpolates";
 import RotationAnimate from "../Interpolations/RotationAnimate";
 import WidthHeight from "../Interpolations/WidthHeight";
+import DelayAnimate from "../Combining Animations/DelayAnimate";
+import ParallelAnimate from "../Combining Animations/ParallelAnimate";
+import SecuenceAnimate from "../Combining Animations/SecuenceAnimate";
 
 const AllFunctions = () => {
   return (
@@ -199,6 +202,51 @@ const AllFunctions = () => {
           width height interpolation Animation{" "}
         </Text>
         <WidthHeight />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#D291BC",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          Delay Animation{" "}
+        </Text>
+        <DelayAnimate />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#FCDFFF",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          Parallel Animation{" "}
+        </Text>
+        <ParallelAnimate />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#EBDDE2",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          Sequence Animation{" "}
+        </Text>
+        <SecuenceAnimate />
       </View>
     </ScrollView>
   );
