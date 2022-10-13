@@ -1,6 +1,6 @@
 import { View, Text, Animated, TouchableOpacity } from "react-native";
 import React from "react";
-
+import { Entypo } from "@expo/vector-icons";
 const DivideAnimate = () => {
   const animated = new Animated.Value(0);
 
@@ -37,9 +37,11 @@ const DivideAnimate = () => {
         <Animated.View
           style={[
             animatedStyle,
-            { width: 50, height: 50, backgroundColor: "teal" },
+            // { width: 50, height: 50, backgroundColor: "teal" },
           ]}
-        />
+        >
+          <Entypo name="emoji-sad" size={60} color="red" />
+        </Animated.View>
       </TouchableOpacity>
     </View>
   );
