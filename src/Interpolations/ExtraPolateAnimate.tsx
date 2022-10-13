@@ -1,6 +1,6 @@
 import { View, Text, Animated, TouchableOpacity } from "react-native";
 import React from "react";
-
+import { FontAwesome } from "@expo/vector-icons";
 const ExtraPolateAnimate = () => {
   const animation = new Animated.Value(1);
 
@@ -36,10 +36,12 @@ const ExtraPolateAnimate = () => {
       <TouchableOpacity onPress={startAnimation}>
         <Animated.View
           style={[
-            { width: 70, height: 70, backgroundColor: "teal" },
+            // { width: 70, height: 70, backgroundColor: "teal" },
             animationStyle,
           ]}
-        />
+        >
+          <FontAwesome name="heartbeat" size={100} color="red" />
+        </Animated.View>
       </TouchableOpacity>
     </View>
   );
