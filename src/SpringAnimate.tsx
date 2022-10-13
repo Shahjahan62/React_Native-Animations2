@@ -1,6 +1,6 @@
 import { View, Text, Animated, TouchableOpacity } from "react-native";
 import React, { useRef } from "react";
-
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 const SpringAnimate = () => {
   const sprng1 = useRef(new Animated.Value(1)).current;
 
@@ -73,10 +73,16 @@ const SpringAnimate = () => {
       <TouchableOpacity onPress={handleLoop}>
         <Animated.View
           style={[
-            { width: 60, height: 60, marginTop: 100, backgroundColor: "teal" },
+            { width: "100%", height: 100, marginTop: 100 },
             animatedStyle3,
           ]}
-        />
+        >
+          <MaterialCommunityIcons
+            name="star-four-points-outline"
+            size={80}
+            color="white"
+          />
+        </Animated.View>
       </TouchableOpacity>
     </View>
   );
