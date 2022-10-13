@@ -16,6 +16,8 @@ import WidthHeight from "../Interpolations/WidthHeight";
 import DelayAnimate from "../Combining Animations/DelayAnimate";
 import ParallelAnimate from "../Combining Animations/ParallelAnimate";
 import SecuenceAnimate from "../Combining Animations/SecuenceAnimate";
+import StaggerAnimate from "../Combining Animations/StaggerAnimate";
+import ButtonComp from "../Animated components/ButtonComp";
 
 const AllFunctions = () => {
   return (
@@ -247,6 +249,51 @@ const AllFunctions = () => {
           Sequence Animation{" "}
         </Text>
         <SecuenceAnimate />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#F0FFF0",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          Stagger Animation{" "}
+        </Text>
+        <StaggerAnimate />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#F0FFF0",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          Stagger Animation{" "}
+        </Text>
+        <StaggerAnimate />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#fff",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          component Animation{" "}
+        </Text>
+        <ButtonComp />
       </View>
     </ScrollView>
   );
