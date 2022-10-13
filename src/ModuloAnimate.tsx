@@ -25,7 +25,14 @@ const ModuloAnimate = () => {
     transform: [{ rotate: interpolated }],
   };
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        // flex: 1,
+
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <TouchableOpacity onPress={startAnimation}>
         <Animated.View
           style={[
