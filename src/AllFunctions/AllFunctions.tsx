@@ -9,6 +9,8 @@ import SpringAnimate from "../SpringAnimate";
 import SwipeImages from "../SwipeImages";
 import EventAnimate from "../EventAnimate";
 import BgColorInterpolations from "../Interpolations/BgColorInterpolations";
+import ExtraPolateAnimate from "../Interpolations/ExtraPolateAnimate";
+import NumAndInterpolates from "../Interpolations/NumAndInterpolates";
 
 const AllFunctions = () => {
   return (
@@ -119,21 +121,7 @@ const AllFunctions = () => {
         <EventAnimate />
       </View>
 
-      <View
-        style={{
-          alignItems: "center",
-          height: 450,
-          backgroundColor: "#FBE7A1",
-          paddingTop: 30,
-
-          //   flex: 1,
-        }}
-      >
-        <Text style={{ fontWeight: "900", fontSize: 30 }}>
-          Event throttle Animation{" "}
-        </Text>
-        <EventAnimate />
-      </View>
+      {/* Interpolations */}
       <Text style={{ fontWeight: "900", fontSize: 50 }}>Interpolations</Text>
       <View
         style={{
@@ -149,6 +137,36 @@ const AllFunctions = () => {
           Background color interpolation Animation{" "}
         </Text>
         <BgColorInterpolations />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#FFCBA4",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          Extrapolate interpolation Animation{" "}
+        </Text>
+        <ExtraPolateAnimate />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#FDD7E4",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          Random number interpolation Animation{" "}
+        </Text>
+        <NumAndInterpolates />
       </View>
     </ScrollView>
   );
