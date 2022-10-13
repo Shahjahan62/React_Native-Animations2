@@ -25,7 +25,14 @@ const DivideAnimate = () => {
     transform: [{ translateY: newAnimated }],
   };
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        // flex: 1,
+
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <TouchableOpacity onPress={startAnimation}>
         <Animated.View
           style={[
