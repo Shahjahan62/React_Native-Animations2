@@ -11,7 +11,7 @@ const NumAndInterpolates = () => {
       useNativeDriver: false,
     }).start(() => {
       Animated.timing(animate, {
-        toValue: 2,
+        toValue: 0,
         duration: 300,
         useNativeDriver: false,
       });
@@ -30,7 +30,7 @@ const NumAndInterpolates = () => {
 
   const translateXinterpolate = animatedInterpolate.interpolate({
     inputRange: [0, 30, 65, 100, 120, 160, 200, 220, 300],
-    outputRange: [-30, -60, -20, -50, 0, -100, 0, 200, -100],
+    outputRange: [-30, -60, -20, -50, 0, -100, 0, 200, -30],
   });
 
   const animateStyle = {
