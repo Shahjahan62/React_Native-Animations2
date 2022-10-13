@@ -11,6 +11,8 @@ import EventAnimate from "../EventAnimate";
 import BgColorInterpolations from "../Interpolations/BgColorInterpolations";
 import ExtraPolateAnimate from "../Interpolations/ExtraPolateAnimate";
 import NumAndInterpolates from "../Interpolations/NumAndInterpolates";
+import RotationAnimate from "../Interpolations/RotationAnimate";
+import WidthHeight from "../Interpolations/WidthHeight";
 
 const AllFunctions = () => {
   return (
@@ -167,6 +169,36 @@ const AllFunctions = () => {
           Random number interpolation Animation{" "}
         </Text>
         <NumAndInterpolates />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#FFC0CB",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          Rotation interpolation Animation{" "}
+        </Text>
+        <RotationAnimate />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+          height: 450,
+          backgroundColor: "#F660AB",
+          paddingTop: 30,
+
+          //   flex: 1,
+        }}
+      >
+        <Text style={{ fontWeight: "900", fontSize: 30 }}>
+          width height interpolation Animation{" "}
+        </Text>
+        <WidthHeight />
       </View>
     </ScrollView>
   );
